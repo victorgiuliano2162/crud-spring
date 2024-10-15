@@ -1,9 +1,11 @@
 export interface Client {
   clientId: number;
-  clientName: string;
-  clientNumber: string;
-  clientAdress: string;
-  clientGender: string;
-  clientProducts: string;
+  clientNome: string;
+  clienteCpf: string;
+  clienteTelefone: string;
+  clienteEmail: string;
+  clienteEndereco: string;
+  clienteCidade: string;
+  clienteItems: string;
 }
 
