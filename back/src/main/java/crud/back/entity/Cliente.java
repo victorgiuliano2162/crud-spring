@@ -10,9 +10,9 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long clienteId;
 
-    private String clientNome;
+    private String clienteNome;
     private String clienteCpf;
     private String clienteTelefone;
     private String clienteEmail;
