@@ -1,26 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ClienteListComponent } from './components/cliente-list/cliente-list.component';
+import { ClienteCreateComponent } from './components/cliente-create/cliente-create.component';
+import { clienteResolver } from './resolver/cliente.resolver';
 
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: '/home'
+    pathMatch: 'prefix',
+    redirectTo: 'home',
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent
-  }
+    path: 'cliente-list',
+    component: ClienteListComponent,
+  },
+  {
+    path: 'cliente',
+    component: ClienteCreateComponent,
+    resolve: { cliente: clienteResolver }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
