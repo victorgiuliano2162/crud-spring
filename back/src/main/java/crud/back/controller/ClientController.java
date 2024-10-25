@@ -3,6 +3,7 @@ package crud.back.controller;
 import crud.back.entity.Cliente;
 import crud.back.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class ClientController {
         return clienteService.getClientes();
     }
 
-    @GetMapping("cliente/cliente/{id}")
+    @GetMapping("cliente/{id}")
     public Cliente getCliente(@PathVariable Long id) {
         return clienteService.getClienteById(id);
     }
@@ -35,7 +36,7 @@ public class ClientController {
         clienteService.deleteClienteById(id);
     }
 
-    @PutMapping("cliente/atualizar")
+    @PutMapping("cliente/up")
     public Cliente atualizarCliente(@RequestBody Cliente cliente) {
         return clienteService.updateCliente(cliente);
     }
