@@ -1,0 +1,128 @@
+<div class="container mt-5">
+  <div class="card p-5 mt-2">
+    <div align="right">
+      <button mat-raised-button color="basic" routerLink="/cliente-list">
+        Lista de Clientes
+      </button>
+    </div>
+    <p>Informe os dados do cliente</p>
+    <form #clienteForm="ngForm" (ngSubmit)="saveCliente(clienteForm)">
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente Id</mat-label>
+        <input
+          matInput
+          placeholder="Id"
+          name="clienteId"
+          [(ngModel)]="cliente.clienteId"
+          disabled
+        />
+        <mat-icon matSuffix>badge</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente nome</mat-label>
+        <input
+          matInput
+          placeholder="Cliente nome"
+          name="clienteNome"
+          [(ngModel)]="cliente.clienteNome"
+        />
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente CPF</mat-label>
+        <input
+          matInput
+          placeholder="Cliente CPF"
+          name="clienteCpf"
+          [(ngModel)]="cliente.clienteCpf"
+        />
+        <mat-icon matSuffix>badge</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente Telefone</mat-label>
+        <input
+          matInput
+          placeholder="Cliente Telefone"
+          name="clienteTelefone"
+          [(ngModel)]="cliente.clienteTelefone"
+        />
+        <mat-icon matSuffix>smartphone</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente Email</mat-label>
+        <input
+          matInput
+          placeholder="Cliente Email"
+          name="clienteEmail"
+          [(ngModel)]="cliente.clienteEmail"
+        />
+        <mat-icon matSuffix>alternate_email</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente Endereço</mat-label>
+        <input
+          matInput
+          placeholder="Cliente Endereço"
+          name="clienteEndereco"
+          [(ngModel)]="cliente.clienteEndereco"
+        />
+        <mat-icon matSuffix>home</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente Cidade</mat-label>
+        <input
+          matInput
+          placeholder="Cliente Cidade"
+          name="clienteCidade"
+          [(ngModel)]="cliente.clienteCidade"
+        />
+        <mat-icon matSuffix>person_pin</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cliente itens</mat-label>
+        <input
+          matInput
+          placeholder="Cliente Itens"
+          name="clienteItems"
+          [(ngModel)]="cliente.clienteItems"
+        />
+        <mat-icon matSuffix>shopping_cart</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Sexo</mat-label>
+        <mat-select
+          name="employeeDepartment"
+          [(ngModel)]="cliente.clienteSexo">
+          <mat-option value="masculino">Masculino</mat-option>
+          <mat-option value="feminino">Feminino</mat-option>
+          <mat-option value="Outro">Outro</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mt-2">
+        <mat-label>Itens</mat-label>
+        <input
+          matInput
+          placeholder="Employee skills"
+          name="employeeSkills"
+          [(ngModel)]="cliente.clienteItems"
+          disabled
+        />
+        <mat-icon matSuffix>menu_book</mat-icon>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <div class="text-center center mt-3">
+        <button mat-raised-button (click)="clearForm()">Clear</button>
+        <button mat-raised-button color="primary" class="m-2">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

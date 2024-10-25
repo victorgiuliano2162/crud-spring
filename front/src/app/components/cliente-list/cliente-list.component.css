@@ -1,5 +1,8 @@
+
+
+
 mat-card {
-  max-width: 600px;
+  max-width: 1500px;
   margin: 4rem auto;
   padding: 2rem;
   text-align: center;
@@ -14,9 +17,14 @@ mat-card {
   background-color: #fff;
 
 }
+mat-card-header {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+.title {
+  padding: 10px;
 
-mat-card-title {
-  padding: 10px;;
 }
 
 mat-card-content {
@@ -24,8 +32,4 @@ mat-card-content {
   place-items: center;
 }
 
-button {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #000000;
-}
+
