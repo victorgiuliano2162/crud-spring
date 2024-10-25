@@ -33,7 +33,7 @@ public class ClienteService {
     }
 
     public Cliente updateCliente(Cliente cliente) {
-        clienteDAO.findById(cliente.getId()).orElseThrow();
+        clienteDAO.findById(cliente.getClienteId()).orElseThrow();
         return clienteDAO.save(cliente);
     }
 }
