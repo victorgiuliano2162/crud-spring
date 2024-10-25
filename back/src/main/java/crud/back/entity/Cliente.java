@@ -19,4 +19,5 @@ public class Cliente {
     private String clienteEndereco;
     private String clienteCidade;
     private String clienteItems;
+    private String clienteSexo;
 }
