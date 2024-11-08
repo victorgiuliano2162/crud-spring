@@ -19,7 +19,7 @@ mat-toolbar {
   text-align: center;
 
   padding: 2px;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }

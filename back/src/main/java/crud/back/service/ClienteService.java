@@ -36,4 +36,16 @@ public class ClienteService {
         clienteDAO.findById(cliente.getClienteId()).orElseThrow();
         return clienteDAO.save(cliente);
     }
+
+    public List<String> getTest() {
+        List<Cliente> homis = new ArrayList();
+        clienteDAO.testQuery().forEach(homis::add);
+        List<String> nomes = new ArrayList();
+
+        for (Cliente cliente : homis) {
+            System.out.println(cliente.getClienteNome());
+            nomes.add(cliente.getClienteNome());
+        }
+        return nomes;
+    }
 }
